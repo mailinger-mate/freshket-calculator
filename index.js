@@ -136,3 +136,11 @@ class Order {
     return total - await this.getTotalDiscount();
   }
 }
+
+(async () => {
+  const order = new Order('member');
+  // await order.setItem(green, 2);
+  order.items.set('green', 2)
+  console.log(await order.getTotalDiscount(), await order.getTotal())
+})();
+
