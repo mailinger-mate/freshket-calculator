@@ -1,13 +1,36 @@
 <!doctype html>
-<meta charset=utf-8>
-<title>freshket test</title>
-<style>
-  body {
-    background-color: Canvas;
-    color: CanvasText;
-    color-scheme: light dark;
-    font-family: system-ui;
-  }
-</style>
-<h1>freshket test</h1>
-<script src="index.js"></script>
+<html lang=en>
+
+<head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>freshket order test</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body data-text-add="Add" data-text-item="Item" data-text-quantity="Quantity" data-text-subtotal="Subtotal"
+  data-text-total="Total" data-text-member="Member" data-text-currency="Currency" data-text-details="Details">
+
+  <main>
+    <p>The <a href="https://docs.google.com/document/d/1GL1tv_DEaL5CheLfR_tFu6U41r8_3GJhBG9oi84Jxns/edit?tab=t.0#heading=h.18lnwrfmg4uc" target="_blank">Calculator</a> homework for <a href="http://freshket.co" target="_blank">Freshket</a> by <a rel="author" href="mailto:mate@mailinger.hu">mate@mailinger.hu</a></p>
+    <h1>Inventory</h1>
+    <ul>
+      <li><item-form data-id="red">Fabulous red</item-form></li>
+      <li><item-form data-id="green">Natural green</item-form></li>
+      <li><item-form data-id="blue">Beautiful blue</item-form></li>
+      <li><item-form data-id="yellow">Sunny yellow</item-form></li>
+      <li><item-form data-id="pink">Pretty pink</item-form></li>
+      <li><item-form data-id="purple">Royal purple</item-form></li>
+      <li><item-form data-id="orange">Vibrant orange</item-form></li>
+    </ul>
+  </main>
+
+  <aside id="order">
+    <h2>Order</h2>
+    <order-form data-text-item="Item" data-text-quantity="Quantity"></order-form>
+  </aside>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

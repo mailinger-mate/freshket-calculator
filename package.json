@@ -1,0 +1,16 @@
+{
+  "name": "freshket-order",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite --open",
+    "test": "vitest"
+  },
+  "author": "mate@mailinger.hu",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^5.4.9",
+    "vitest": "^2.1.3"
+  }
+}

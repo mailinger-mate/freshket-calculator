@@ -1,0 +1,131 @@
+:root {
+  --quantity-width: 3em;
+  --color-border: 1px solid hsl(from currentColor 0 0 32);
+  --gradient-red: linear-gradient(to right, #cb2d3e, #ef473a);
+  --gradient-green: linear-gradient(to right, #2e7d32, #43a047);
+  --gradient-blue: linear-gradient(to right, #1e88e5, #2196f3);
+  --gradient-yellow: linear-gradient(to right, #f9a825, #fbc02d);
+  --gradient-pink: linear-gradient(to right, #d66d75, #e29587);
+  --gradient-purple: linear-gradient(to right, #8e24aa, #ab47bc);
+  --gradient-orange: linear-gradient(to right, #f57c00, #ff9800);
+}
+
+body {
+  background-color: Canvas;
+  color: CanvasText;
+  color-scheme: light dark;
+  font-family: system-ui;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+main {
+  overflow-y: auto;
+  padding: 1em;
+  h1 {
+    margin-top: 0;
+  }
+}
+
+item-form {
+  display: block;
+  border-radius: 1em;
+  padding: 1em;
+
+  &::part(quantity) {
+    width: var(--quantity-width);
+  }
+  &::part(discounts) {
+    display: flex;
+    gap: 0.5em;
+    padding: 0;
+    list-style: none;
+    font-size: small;
+  }
+  &::part(discount) {
+    border: 1px solid currentColor;
+    border-radius: 1em;
+    padding: 0.25em 0.5em;
+  }
+  &::part(price) {
+    font-size: large;
+  }
+
+  &[data-id=red] {
+    background: var(--gradient-red);
+  }
+  &[data-id=green] {
+    background: var(--gradient-green);
+  }
+  &[data-id=blue] {
+    background: var(--gradient-blue);
+  }
+  &[data-id=yellow] {
+    background: var(--gradient-yellow);
+  }
+  &[data-id=pink] {
+    background: var(--gradient-pink);
+  }
+  &[data-id=purple] {
+    background: var(--gradient-purple);
+  }
+  &[data-id=orange] {
+    background: var(--gradient-orange);
+  }
+}
+aside {
+  padding: 1em;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+order-form {
+  &::part(quantity) {
+    width: var(--quantity-width);
+  }
+  &::part(details) {
+    display: flex;
+    gap: .5em;
+    margin: 0;
+    border: var(--color-border);
+    border-radius: 1em;
+  }
+  &::part(member) {
+    width: 10ch;
+  }
+  &::part(table) {
+    border: var(--color-border);
+    border-spacing: .5em;
+    border-radius: 1em;
+    width: 100%;
+    max-width: 100%;
+    table-layout: auto;
+    margin: .5em 0;
+    text-align: left;
+  }
+  &::part(thead) {
+    font-size: smaller;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style: none;
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+@media screen and (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+}
